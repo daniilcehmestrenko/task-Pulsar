@@ -9,7 +9,7 @@ class ProductListAPIView(ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend]
-    filterset_fields=('status',)
+    filterset_fields=('status', 'article', 'name')
 
 
 class ProductDetailAPIView(RetrieveAPIView):
